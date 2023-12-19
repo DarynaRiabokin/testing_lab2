@@ -17,7 +17,7 @@ namespace test_lab_2.PageObjects
 
         public CustomersPage ClickOnCustomers()
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(sleepTo);
             Driver.FindElement(customersMenuItem).Click();
             return new CustomersPage(Driver);
         }

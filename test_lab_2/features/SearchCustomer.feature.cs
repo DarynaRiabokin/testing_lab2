@@ -183,7 +183,7 @@ this.FeatureBackground();
     testRunner.When("I input in the search \"A\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 29
-    testRunner.Then("I should see all customers which contains \"A\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I should see all customers with names starting with \"A\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

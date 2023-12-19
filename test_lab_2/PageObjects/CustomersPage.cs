@@ -12,7 +12,7 @@ namespace test_lab_2.PageObjects
         }
         public void ClearSearch()
         {
-            Thread.Sleep(100); 
+            Thread.Sleep(sleepTo); 
             var input = Driver.FindElement(customersSearchInput);
             input.Clear();
         }
@@ -20,14 +20,14 @@ namespace test_lab_2.PageObjects
 
         internal void AssertTableData(List<List<string>> fullCustomerTableData)
         {
-            Thread.Sleep(500);
+            Thread.Sleep(sleepTo);
             var currentTable = GetAllCustomerRows();
             Assert.That(AreListsEqual(fullCustomerTableData, currentTable), Is.EqualTo(true));
         }
 
         public List<List<string>> GetAllCustomerRows()
         {
-            Thread.Sleep(500);
+            Thread.Sleep(sleepTo);
             var rows = Driver.FindElements(customersList);
 
             List<List<string>> tableData = new List<List<string>>();
@@ -69,7 +69,7 @@ namespace test_lab_2.PageObjects
 
         internal void InputParameterInTheSearch(string parameter)
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(sleepTo);
             var input = Driver.FindElement(customersSearchInput);
             input.SendKeys(parameter);
         }

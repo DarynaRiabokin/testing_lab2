@@ -10,7 +10,7 @@ namespace test_lab_2.PageObjects
 
         public ManagerPage ClickBankManagerLogin()
         {
-            Thread.Sleep(500);
+            Thread.Sleep(sleepTo);
             By managerLoginBtn = By.XPath("//button[contains(text(),'Bank Manager Login')]");
             Driver.FindElement(managerLoginBtn).Click();
             return new ManagerPage(Driver);

@@ -63,7 +63,7 @@ namespace test_lab_2.Steps
         {
             Assert.That( customersPage.TableIsEmpty(),Is.EqualTo(true));
         }
-        [Then(@"I should see all customers which contains ""(.*)""")]
+        [Then(@"I should see all customers with names starting with ""(.*)""")]
         public void ThenIShouldSeeAllCustomersWithNamesStartingWithSubstring(string substr)
         {
             Assert.That(customersPage.CheckCustomersTable(substr), Is.EqualTo(true));

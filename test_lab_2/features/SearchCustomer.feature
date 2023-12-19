@@ -26,7 +26,7 @@ Background:
 
   Scenario: Search with a single character
     When I input in the search "A"
-    Then I should see all customers which contains "A"
+    Then I should see all customers with names starting with "A"
 
   Scenario: Case insensitive search for a customer
     When I input in the search "poTTer"
